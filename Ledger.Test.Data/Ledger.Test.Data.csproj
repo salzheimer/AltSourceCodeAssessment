@@ -149,7 +149,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account_Test.cs" />
+    <Compile Include="AccountTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

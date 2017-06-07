@@ -3,20 +3,18 @@ using Ledger.Core;
 
 namespace Ledger.Data.Mapping
 {
-    
-public class PaymentTypeMap: EntityTypeConfiguration<PaymentType>
+    public class PaymentTypeMap : EntityTypeConfiguration<PaymentType>
     {
         public PaymentTypeMap()
         {
+            HasKey(t => t.Id);
 
-            this.HasKey(t => t.Id);
-
-            this.ToTable("PaymentType");
-            this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
-            this.Property(t => t.DateCreated).HasColumnName("DateCreated");
-            this.Property(t => t.UpdatedBy).HasColumnName("UpdatedBy");
-            this.Property(t => t.DateUpdated).HasColumnName("DateUpdated");
+            ToTable("PaymentType");
+            Property(t => t.Name).HasColumnName("Name");
+            Property(t => t.CreatedBy).HasColumnName("CreatedBy");
+            Property(t => t.DateCreated).HasColumnName("DateCreated");
+            Property(t => t.UpdatedBy).HasColumnName("UpdatedBy");
+            Property(t => t.DateUpdated).HasColumnName("DateUpdated");
         }
     }
 }

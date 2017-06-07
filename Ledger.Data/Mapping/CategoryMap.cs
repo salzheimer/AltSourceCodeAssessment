@@ -3,23 +3,20 @@ using Ledger.Core;
 
 namespace Ledger.Data.Mapping
 {
-    public class CategoryMap:EntityTypeConfiguration<Category>
+    public class CategoryMap : EntityTypeConfiguration<Category>
     {
-
-
         public CategoryMap()
         {
+            HasKey(t => t.Id);
 
-            this.HasKey(t => t.Id);
+            ToTable("Category");
 
-            this.ToTable("Category");
+            Property(t => t.CatergoryName).HasColumnName("Name");
 
-            this.Property(t => t.CatergoryName).HasColumnName("Name");
-
-            this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
-            this.Property(t => t.DateCreated).HasColumnName("DateCreated");
-            this.Property(t => t.UpdatedBy).HasColumnName("UpdatedBy");
-            this.Property(t => t.DateUpdated).HasColumnName("DateUpdated");
+            Property(t => t.CreatedBy).HasColumnName("CreatedBy");
+            Property(t => t.DateCreated).HasColumnName("DateCreated");
+            Property(t => t.UpdatedBy).HasColumnName("UpdatedBy");
+            Property(t => t.DateUpdated).HasColumnName("DateUpdated");
         }
     }
 }

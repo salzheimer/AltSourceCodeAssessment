@@ -1,13 +1,11 @@
-﻿using System;
-using Ledger.Core;
+﻿using Ledger.Core;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace Ledger.Data
 {
-    public class LedgerContext:DbContext
+    public class LedgerContext : DbContext
     {
-        public LedgerContext(DbContextOptions options):base(options)
+        public LedgerContext(DbContextOptions options) : base(options)
         {
         }
 

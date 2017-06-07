@@ -1,15 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Ledger.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Ledger.Data;
 
 namespace Ledger.Services
 {
     public class StartUp
     {
-        public void ConfigurationServices(IServiceCollection services)
+        public static void ConfigurationServices(IServiceCollection services)
         {
-            services.AddDbContext<LedgerContext>(opt=>opt.UseInMemoryDatabase());
-            
+            services.AddDbContext<LedgerContext>(opt => opt.UseInMemoryDatabase());
         }
     }
 }
