@@ -1,22 +1,29 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Ledger.Core;
 
 namespace Ledger.Core
-{
+{ 
+    [Table("Transaction")]
     public class Transaction:BaseEntity
     {
         public Transaction()
         {
-            _id = Guid.NewGuid();
+           // this.Id = Guid.NewGuid();
         }
 
-        private Guid _id;
-        public Guid Id { get { return _id; }}
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        [Required]
         public DateTime TransactionDate { get; set; }
         public string Description { get; set; }
         public int CategoryId { get; set; } 
         public int PaymentTypeId { get; set; }
-		public bool IsDeposit { get; set; }
-
-
+        [Required]
+        public bool IsDeposit { get; set; }
+        [Required]
+        public decimal Amount { get; set; }
     }
 }
