@@ -1,14 +1,16 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Ledger.Core;
 using Ledger.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Ledger.Test.Data
+namespace Test.Ledger.Data.ContextTests
 {
     [TestClass]
     public class AccountTest
     {
+        
         [TestMethod]
         public void Can_Create_Account()
         {
@@ -22,7 +24,9 @@ namespace Ledger.Test.Data
                     FirstName = "Bob",
                     LastName = "Villa",
                     UserName = "BVilla",
-                    Password = "I am Awesome"
+                    Password = "I am Awesome",
+                    CreatedBy = "Admin",
+                    DateCreated = DateTime.Now
                 });
                 context.SaveChanges();
 

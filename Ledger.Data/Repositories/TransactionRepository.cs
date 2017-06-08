@@ -10,14 +10,21 @@ namespace Ledger.Data.Repositories
 {
     public class TransactionRepository : ITransactionRepository
     {
-        public int Create(Transaction transaction, DbContextOptionsBuilder<LedgerContext> context)
+        public Guid Create(Transaction transaction, DbContextOptionsBuilder<LedgerContext> context)
         {
             try
             {
                 using (var ctx = new LedgerContext(context.Options))
                 {
+                    transaction.DateCreated = DateTime.Now;
                     ctx.Transactions.Add(transaction);
-                    return ctx.SaveChanges();
+                    if( ctx.SaveChanges()!=1)
+                    {
+                        return Guid.Empty;
+                    }
+                   
+                        return transaction.Id;
+                    
                 }
             }
             catch (DbEntityValidationException ex)
@@ -30,7 +37,7 @@ namespace Ledger.Data.Repositories
             }
         }
 
-        public Transaction GeTransaction(Guid id, DbContextOptionsBuilder<LedgerContext> context)
+        public Transaction GetTransaction(Guid id, DbContextOptionsBuilder<LedgerContext> context)
         {
             using (var ctx = new LedgerContext(context.Options))
             {
@@ -42,12 +49,32 @@ namespace Ledger.Data.Repositories
             }
         }
 
-        public List<Transaction> GeTransactions(Guid accountId, DbContextOptionsBuilder<LedgerContext> context)
+        public List<Transaction> GetTransactions(Guid accountId, DbContextOptionsBuilder<LedgerContext> context)
         {
             using (var ctx = new LedgerContext(context.Options))
             {
                 return ctx.Transactions.ToList();
             }
+        }
+
+        public int RemoveTransaction(Guid transId, DbContextOptionsBuilder<LedgerContext> context)
+        {
+            using (var ctx = new LedgerContext(context.Options))
+            {
+                var entity = ctx.Transactions.FirstOrDefault(t => t.Id == transId);
+                if (entity != null)
+                {
+                    ctx.Entry(entity).State = EntityState.Deleted;
+                    
+                }
+
+                return ctx.SaveChanges();
+            }
+        }
+
+        public int UpdateTransaction(Guid transId, DbContextOptionsBuilder<LedgerContext> context)
+        {
+            throw new NotImplementedException();
         }
     }
 }

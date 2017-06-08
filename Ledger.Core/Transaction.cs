@@ -7,6 +7,11 @@ namespace Ledger.Core
     [Table("Transaction")]
     public class Transaction : BaseEntity
     {
+        //public Transaction()
+        //{
+        //    this.Id = Guid.NewGuid();
+        //}
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
