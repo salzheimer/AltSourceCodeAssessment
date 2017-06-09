@@ -8,11 +8,10 @@ using System.Text;
 namespace Ledger.Services.Api.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ICategoryServices" in both code and config file together.
-    [ServiceContract]
-    public interface ICategoryServices
+    [ServiceContract(Namespace = "http://Ledger.Api")]
+    public interface ICategoryService
     {
-        [OperationContract]
-        void DoWork();
+      
 
         [OperationContract]
         List<Core.Category> GetCategories();

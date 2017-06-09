@@ -8,11 +8,10 @@ using System.Text;
 namespace Ledger.Services.Api.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IPaymentTypeService" in both code and config file together.
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://Ledger.Api")]
     public interface IPaymentTypeService
     {
-        [OperationContract]
-        void DoWork();
+
 
         [OperationContract]
         string CreatePaymentType(Core.PaymentType pType);

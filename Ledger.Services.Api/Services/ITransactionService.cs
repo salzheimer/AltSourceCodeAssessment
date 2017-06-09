@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace Ledger.Services.Api.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ITransactionService" in both code and config file together.
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://Ledger.Api")]
     public interface ITransactionService
     {
         [OperationContract]
