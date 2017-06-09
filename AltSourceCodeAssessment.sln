@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledger.Data", "Ledger.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Ledger.Data", "Test.Ledger.Data\Test.Ledger.Data.csproj", "{F2D9CFEE-5FFA-4F34-A679-E4A18113D8BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledger.Services.Api", "Ledger.Services.Api\Ledger.Services.Api.csproj", "{116C7C4F-76B2-4A9B-A257-9441114A6842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{F2D9CFEE-5FFA-4F34-A679-E4A18113D8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2D9CFEE-5FFA-4F34-A679-E4A18113D8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2D9CFEE-5FFA-4F34-A679-E4A18113D8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116C7C4F-76B2-4A9B-A257-9441114A6842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116C7C4F-76B2-4A9B-A257-9441114A6842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116C7C4F-76B2-4A9B-A257-9441114A6842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116C7C4F-76B2-4A9B-A257-9441114A6842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,6 @@ namespace Ledger.Data.Interfaces
         List<Transaction> GetTransactions(Guid accountId, DbContextOptionsBuilder<LedgerContext> context);
 
         int RemoveTransaction(Guid transId, DbContextOptionsBuilder<LedgerContext> context);
-        int UpdateTransaction(Guid transId, DbContextOptionsBuilder<LedgerContext> context);
+        int UpdateTransaction(Transaction transaction, DbContextOptionsBuilder<LedgerContext> context);
     }
 }

@@ -11,7 +11,7 @@ namespace Ledger.Data.Mapping
 
             ToTable("Category");
 
-            Property(t => t.CatergoryName).HasColumnName("Name");
+            Property(t => t.CategoryName).HasColumnName("Name");
 
             Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             Property(t => t.DateCreated).HasColumnName("DateCreated");

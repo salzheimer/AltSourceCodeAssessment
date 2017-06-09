@@ -10,6 +10,6 @@ namespace Ledger.Core
         public int Id { get; set; }
 
         [Required]
-        public string CatergoryName { get; set; }
+        public string CategoryName { get; set; }
     }
 }

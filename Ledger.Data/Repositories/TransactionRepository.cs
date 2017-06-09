@@ -72,7 +72,7 @@ namespace Ledger.Data.Repositories
             }
         }
 
-        public int UpdateTransaction(Guid transId, DbContextOptionsBuilder<LedgerContext> context)
+        public int UpdateTransaction(Transaction transaction, DbContextOptionsBuilder<LedgerContext> context)
         {
             throw new NotImplementedException();
         }
