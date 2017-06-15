@@ -16,7 +16,7 @@ namespace Ledger.Data.Repositories
             {
                 using (var ctx = new LedgerContext(context.Options))
                 {
-                    transaction.DateCreated = DateTime.Now;
+                    transaction.DateCreated = DateTime.Now.ToUniversalTime();
                     ctx.Transactions.Add(transaction);
                     if( ctx.SaveChanges()!=1)
                     {
@@ -53,7 +53,7 @@ namespace Ledger.Data.Repositories
         {
             using (var ctx = new LedgerContext(context.Options))
             {
-                return ctx.Transactions.ToList();
+                return ctx.Transactions.OrderBy(t=>t.TransactionDate).ToList();
             }
         }
 

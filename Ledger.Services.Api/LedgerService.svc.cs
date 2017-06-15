@@ -260,9 +260,17 @@ namespace Ledger.Services.Api
             if (!deposit.IsDeposit) { return "This is not a deposit"; }
 
             ITransactionRepository repo = new TransactionRepository();
+            var trans = new Transaction();
+            trans.AccountId = deposit.AccountId;
+            trans.Amount = deposit.Amount;
+            trans.CategoryId = deposit.CategoryId;
+            trans.PaymentTypeId = deposit.PaymentTypeId;
+            trans.CreatedBy = deposit.CreatedBy;
+            trans.Description = deposit.Description;
+            trans.IsDeposit = deposit.IsDeposit;
+            trans.TransactionDate = deposit.TransactionDate;
 
-
-            return repo.Create(deposit, OptionsBuilder).ToString();
+            return repo.Create(trans, OptionsBuilder).ToString();
 
         }
 
@@ -272,7 +280,17 @@ namespace Ledger.Services.Api
 
             if (withdrawal.IsDeposit) { return "This is not a withdrawal"; }
             ITransactionRepository repo = new TransactionRepository();
-            return repo.Create(withdrawal, OptionsBuilder).ToString();
+            var trans = new Transaction();
+            trans.AccountId = withdrawal.AccountId;
+            trans.Amount = withdrawal.Amount;
+            trans.CategoryId = withdrawal.CategoryId;
+            trans.PaymentTypeId = withdrawal.PaymentTypeId;
+            trans.CreatedBy = withdrawal.CreatedBy;
+            trans.Description = withdrawal.Description;
+            trans.IsDeposit = withdrawal.IsDeposit;
+            trans.TransactionDate = withdrawal.TransactionDate;
+
+            return repo.Create(trans, OptionsBuilder).ToString();
         }
 
         public string UpdateTransaction(TransactionModel transaction)

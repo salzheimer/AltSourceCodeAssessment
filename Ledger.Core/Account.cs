@@ -26,6 +26,7 @@ namespace Ledger.Core
         public string UserName { get; set; }
 
         [Required]
+        [DataMember]
         public string Password { get; set; }
     }
 }

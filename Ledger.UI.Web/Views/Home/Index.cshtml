@@ -1,31 +1,257 @@
-﻿@{
+﻿@using Ledger.UI.Web.LedgerService
+@{
     ViewBag.Title = "Home Page";
 }
+@Scripts.Render("~/bundles/jquery")
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <div id="account" class="account">
+        <div id="createAccount">
+            <fieldset>
+                <legend>Create Account</legend>
+                <label class="createAccountLabel">First Name</label><input type="text" name="accFirstName" id="accFirstName" />
+                <label class="createAccountLabel">Last Name</label><input type="text" name="accLastName" id="accLastName" />
+                <label class="createAccountLabel">User Name</label><input type="text" name="accUserName" id="accUserName" />
+                <label class="createAccountLabel">Password</label><input type="text" name="accPassword" id="accPassword" />
+                <input type="button" id="btnCreateAccount" name="btnCreateAccount" value="Create Account" />
+                <span id="acctMessageContainer"><label id="acctMessage" name="acctMessage"></label></span>
+            </fieldset>
+        </div>
+        <div id="login">
+            <fieldset>
+                <legend>Log In</legend>
+                <label class="createAccountLabel">UserName</label><input type="text" name="accLoginUserName" id="accLoginUserName" />
+                <label class="createAccountLabel">Password</label><input type="password" name="accLoginPassword" id="accLoginPassword" />
+                <input type="button" id="btnLogIn" name="btnLogIn" value="Log In" />
+                <span id="loginMessageContainer"><label id="loginMessage"></label></span>
+            </fieldset>
+
+        </div>
+        <div id="logOut">
+            <label id="loggedInUser"></label>
+            <input type="button" id="btnLogOut" value="Log Out" />
+        </div>
+    </div>
+    <div id="history" class="history" style="display:none;">
+        <table id="transHistory">
+            <thead>
+                <tr>
+                    <th class="historyCell historyTransDate">Transaction Date</th>
+                    <th class="historyCell historyCategory">Category</th>
+                    <th class="historyCell historyPaymentType">Payment Type</th>
+                    <th class="historyCell historyDescription">Description</th>
+                    <th class="historyCell historyDeposit">Desposit (+)</th>
+                    <th class="historyCell historyWithdrawal">Withdawal (-)</th>
+                    <th class="historyCell historyBalance">Balance</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+    <div id="createTrans" style="display:none;">
+        <fieldset>
+            <legend>Enter Transaction</legend>
+            <label name="transDesciption">Description</label><input type="text" name="transDescription" id="transDescription" />
+            <label name="transDate">Transaction Date</label><input type="date" name="transDate" id="transDate" />
+            <label name="transAmount">Amount</label><input type="text" name="transAmount" id="transAmount" />
+            <div>
+                <label>Select Payment Type</label>
+                <select id="paymentTypeList" name="paymentTypeList">
+                    @foreach (var pType in ViewBag.PaymentTypes)
+                    {
+                        <option value="@pType.Id">@pType.Name</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <label>Select Category</label>
+                <select id="categoryList" name="categoryList">
+
+                    @foreach (var category in ViewBag.Categories)
+                    {
+
+                        <option value="@category.Id">@category.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <input type="button" id="btnDeposit" name="btnDeposit" value="Desposit" />
+                <input type="button" id="btnWithdrawal" name="btnWithdrawal" value="Withdrawal" />
+            </div>
+            <span id="transActionMessageContainer"><label id="transActionMessage"></label></span>
+        </fieldset>
+
+    </div>
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<script>
+
+
+    function createAccount() {
+
+        var account = {
+            firstName: $('#accFirstName').val(),
+            lastName: $('#accLastName').val(),
+            userName: $('#accUserName').val(),
+            password: $('#accPassword').val()
+        };
+
+        $.ajax({
+
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: '@Url.Action("CreateAccount","Home")',
+            data: JSON.stringify(account),
+            success: function (result) {
+                $('#acctMessage').text(result);
+                $('#accFirstName').val('')
+                $('#accLastName').val('')
+                    $('#accUserName').val('')
+                    $('#accPassword').val('')
+            }
+        });
+    }
+
+    function logIn() {
+
+    var creds = {
+        userName: $('#accLoginUserName').val(),
+        password: $('#accLoginPassword').val()
+    };
+
+    $.ajax({
+
+        contentType: 'application/json;charset=utf-8',
+        dataType: 'json',
+        type: 'POST',
+        url: '@Url.Action("Login","Home")',
+        data: JSON.stringify(creds),
+        success: function (result) {
+
+            if (result.success) {
+                $('#acctId').val(result.message);
+                $('#loginMessage').text('Welcome to the World\'s greatest bank ledger ');
+                GetTransactions();
+                $('#createTrans').show();
+                $('#createAccount').hide();
+                $('#login').hide();
+                $('#logOut').show();
+                $('#loggedInUser').text('Hello ' + creds.userName);
+            } else {
+                $('#loginMessage').text(result.message);
+            }
+        }
+    });
+
+    }
+    function createTransaction(isDeposit) {
+
+        var trans = {
+            Amount: $('#transAmount').val(),
+            Description: $('#transDescription').val(),
+            TransactionDate: $('#transDate').val(),
+            PaymentTypeId: $('#paymentTypeList').val(),
+            PaymentTypeName: $('#paymentTypeList option:selected').text(),
+            CategoryId: $('#categoryList').val(),
+            CategoryName: $('#categoryList option:selected').text(),
+            IsDeposit: isDeposit,
+
+        };
+        $.ajax({
+
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: '@Url.Action("CreateTransaction", "Home")',
+            data: JSON.stringify(trans),
+            success: function (result) {
+
+                if (result.success) {
+                    GetTransactions();
+                } else {
+
+                    $('#transMessage').text(result.message);
+                }
+
+            }
+        });
+
+    }
+    function GetTransactions()
+    {
+          $.ajax({
+
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            type: 'GET',
+            url: '@Url.Action("GetTransactions", "Home")',
+
+            success: function (result) {
+
+                $('#history').show();
+
+                var runnningTotal = 0;
+                $('#transHistory > tbody').empty();
+
+                $.each(result, function (i, item) {
+                    var row = $('#transHistory > tbody:last-child').append('<tr class="historyRow">')
+                        .append('<td class="historyCell historyTransDate"> ' + item.DisplayTransactionDate + '</td>')
+                        .append('<td class="historyCell historyCategory"> ' + item.CategoryName + '</td>')
+                        .append('<td class="historyCell historyPaymentType"> ' + item.PaymentTypeName + '</td>')
+                        .append('<td class="historyCell historyDescription"> ' + item.Description + '</td>')
+
+                    if (item.IsDeposit) {
+                        row.append('<td class="historyCell historyDeposit">' + item.Amount + '</td><td class="historyCell historyWithdrawal"></td>');
+                        runnningTotal += item.Amount;
+                    } else {
+                        row.append('<td class="historyCell historyDeposit"></td><td class="historyCell historyWithdrawal">' + item.Amount + '</td>');
+                        runnningTotal -= item.Amount;
+                    }
+                    row.append('<td class="historyBalance">' + runnningTotal + '</td>');
+                    row.append('</tr> ')
+
+
+                });
+
+            }
+        });
+    }
+
+
+    function LogOut(){
+    $('#createAccount').show();
+        $('#login').show();
+        $('#history').hide();
+        $('#createTrans').hide();
+        $('#logOut').hide();
+        $('#accLoginUserName').val('');
+        $('#accLoginPassword').val('');
+        $('#loginMessage').empty();
+    }
+
+        $(document).ready(function () {
+            $('#logOut').hide();
+        $('#btnCreateAccount').click(function () {
+            createAccount();
+        })
+        $('#btnLogIn').click(function () {
+            logIn();
+        })
+        $('#btnDeposit').click(function () {
+            createTransaction(true);
+        })
+        $('#btnWithdrawal').click(function () {
+            createTransaction(false);
+        })
+        $('#btnLogOut').click(function () {
+            LogOut();
+        })
+
+        })
+
+</script>

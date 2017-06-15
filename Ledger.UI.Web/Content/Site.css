@@ -22,3 +22,23 @@ select,
 textarea {
     max-width: 280px;
 }
+.history {
+    margin: 20px;
+}
+table,.historyCell{
+    border: 2px solid black;
+    text-align:center;
+}
+.historyTransDate,.historyCategory,.historyDescription {
+    width: 150px;
+   
+}
+.historyPaymentType {
+    width: 80px;
+    
+}
+.historyDeposit,.historyWithdrawal,.historyBalance {
+    width: 100px;
+    
+}
+

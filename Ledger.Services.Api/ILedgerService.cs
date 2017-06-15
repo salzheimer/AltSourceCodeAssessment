@@ -8,7 +8,7 @@ using System.Text;
 namespace Ledger.Services.Api
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ILedgerService" in both code and config file together.
-    [ServiceContract(Namespace = "http://Ledger.Api")]
+    [ServiceContract]
     public interface ILedgerService
     {
         [OperationContract]
