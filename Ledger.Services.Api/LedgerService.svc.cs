@@ -71,7 +71,7 @@ namespace Ledger.Services.Api
             for (int i = 0; i < catArray.Length; i++)
             {
 
-                var currentCat = new Core.Category() { CategoryName = catArray[i] };
+                var currentCat = new Core.Category() { CategoryName = catArray[i].Trim() };
                 catRepo.Create(currentCat, OptionsBuilder);
 
             }

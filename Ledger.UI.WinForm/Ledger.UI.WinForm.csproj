@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{59AD43C9-1CB2-4E14-82FA-6ACCF333F5AF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Ledger.UI.Console</RootNamespace>
-    <AssemblyName>Ledger.UI.Console</AssemblyName>
+    <ProjectGuid>{2D515CAA-6F24-4A5D-84AC-5DB840894EEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ledger.UI.WinForm</RootNamespace>
+    <AssemblyName>Ledger.UI.WinForm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,13 +34,17 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -49,24 +53,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Ledger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ledger.Designer.cs">
+      <DependentUpon>Ledger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <EmbeddedResource Include="Ledger.resx">
+      <DependentUpon>Ledger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <None Include="Connected Services\LedgerService\Ledger.Core.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\LedgerService\Ledger.Services.Api.Models.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LedgerService\Ledger.UI.Console.LedgerService.Category.datasource">
+    <None Include="Connected Services\LedgerService\Ledger.UI.WinForm.LedgerService.Category.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LedgerService\Ledger.UI.Console.LedgerService.PaymentType.datasource">
+    <None Include="Connected Services\LedgerService\Ledger.UI.WinForm.LedgerService.PaymentType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LedgerService\Ledger.UI.Console.LedgerService.TransactionModel.datasource">
+    <None Include="Connected Services\LedgerService\Ledger.UI.WinForm.LedgerService.TransactionModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\LedgerService\service.wsdl" />
@@ -76,6 +95,18 @@
     <None Include="Connected Services\LedgerService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20551191-d747-4112-b8e5-b9cb1fca2117" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ledger.Services.Api/LedgerService.svc/api" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1219ae7a-4e6d-4963-9203-5b079876614f" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="86963173-b81d-4a23-9032-b2740fe202da" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ea79c9b1-acf9-49f4-ba28-4025f19ede2f" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="Ledger.Core.xsd" MetadataType="Schema" ID="173ee2f8-abd9-4e0f-9665-aa1053ec2773" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="Ledger.Services.Api.Models.xsd" MetadataType="Schema" ID="d003bfbf-aab3-4688-9c2f-0dfd9f2604b8" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
