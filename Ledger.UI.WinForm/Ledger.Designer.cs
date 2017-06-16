@@ -57,6 +57,7 @@ namespace Ledger.UI.WinForm
             this.Withdrawal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTransaction = new System.Windows.Forms.Panel();
+            this.lblTransactionMessage = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblPaymentType = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace Ledger.UI.WinForm
             this.dtTransactionDate = new System.Windows.Forms.DateTimePicker();
             this.btnDesposit = new System.Windows.Forms.Button();
             this.btnWithdrawal = new System.Windows.Forms.Button();
-            this.lblTransactionMessage = new System.Windows.Forms.Label();
             this.plLogIn.SuspendLayout();
             this.pnCreateAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).BeginInit();
@@ -81,7 +81,7 @@ namespace Ledger.UI.WinForm
             this.btnCreateAccount.Location = new System.Drawing.Point(440, 21);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(106, 23);
-            this.btnCreateAccount.TabIndex = 0;
+            this.btnCreateAccount.TabIndex = 5;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -127,28 +127,28 @@ namespace Ledger.UI.WinForm
             this.txtFirstName.Location = new System.Drawing.Point(77, 18);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TabIndex = 0;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(77, 48);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 6;
+            this.txtLastName.TabIndex = 2;
             // 
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(288, 15);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtUserName.TabIndex = 7;
+            this.txtUserName.TabIndex = 3;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(288, 46);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 4;
             // 
             // lblCreateAccMessage
             // 
@@ -187,7 +187,7 @@ namespace Ledger.UI.WinForm
             this.plLogIn.Location = new System.Drawing.Point(16, 184);
             this.plLogIn.Name = "plLogIn";
             this.plLogIn.Size = new System.Drawing.Size(364, 100);
-            this.plLogIn.TabIndex = 12;
+            this.plLogIn.TabIndex = 1;
             // 
             // lblLoginMessage
             // 
@@ -202,7 +202,7 @@ namespace Ledger.UI.WinForm
             this.btnLogIn.Location = new System.Drawing.Point(231, 17);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(75, 23);
-            this.btnLogIn.TabIndex = 13;
+            this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
@@ -212,14 +212,14 @@ namespace Ledger.UI.WinForm
             this.txtLogInPassword.Location = new System.Drawing.Point(69, 36);
             this.txtLogInPassword.Name = "txtLogInPassword";
             this.txtLogInPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtLogInPassword.TabIndex = 14;
+            this.txtLogInPassword.TabIndex = 2;
             // 
             // txtLogInUserName
             // 
             this.txtLogInUserName.Location = new System.Drawing.Point(69, 10);
             this.txtLogInUserName.Name = "txtLogInUserName";
             this.txtLogInUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtLogInUserName.TabIndex = 13;
+            this.txtLogInUserName.TabIndex = 0;
             // 
             // pnCreateAccount
             // 
@@ -236,7 +236,7 @@ namespace Ledger.UI.WinForm
             this.pnCreateAccount.Location = new System.Drawing.Point(12, 10);
             this.pnCreateAccount.Name = "pnCreateAccount";
             this.pnCreateAccount.Size = new System.Drawing.Size(568, 143);
-            this.pnCreateAccount.TabIndex = 13;
+            this.pnCreateAccount.TabIndex = 0;
             // 
             // dgvTransactionHistory
             // 
@@ -314,7 +314,15 @@ namespace Ledger.UI.WinForm
             this.pnlTransaction.Location = new System.Drawing.Point(22, 650);
             this.pnlTransaction.Name = "pnlTransaction";
             this.pnlTransaction.Size = new System.Drawing.Size(550, 200);
-            this.pnlTransaction.TabIndex = 15;
+            this.pnlTransaction.TabIndex = 2;
+            // 
+            // lblTransactionMessage
+            // 
+            this.lblTransactionMessage.AutoSize = true;
+            this.lblTransactionMessage.Location = new System.Drawing.Point(23, 134);
+            this.lblTransactionMessage.Name = "lblTransactionMessage";
+            this.lblTransactionMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblTransactionMessage.TabIndex = 12;
             // 
             // lblAmount
             // 
@@ -364,14 +372,14 @@ namespace Ledger.UI.WinForm
             this.txtAmount.Location = new System.Drawing.Point(90, 50);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(70, 20);
-            this.txtAmount.TabIndex = 5;
+            this.txtAmount.TabIndex = 1;
             // 
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(90, 20);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(200, 20);
-            this.txtDescription.TabIndex = 6;
+            this.txtDescription.TabIndex = 0;
             // 
             // cbCategory
             // 
@@ -381,7 +389,7 @@ namespace Ledger.UI.WinForm
             this.cbCategory.Location = new System.Drawing.Point(390, 20);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(150, 21);
-            this.cbCategory.TabIndex = 7;
+            this.cbCategory.TabIndex = 3;
             // 
             // cbPaymentType
             // 
@@ -390,7 +398,7 @@ namespace Ledger.UI.WinForm
             this.cbPaymentType.Location = new System.Drawing.Point(390, 50);
             this.cbPaymentType.Name = "cbPaymentType";
             this.cbPaymentType.Size = new System.Drawing.Size(121, 21);
-            this.cbPaymentType.TabIndex = 8;
+            this.cbPaymentType.TabIndex = 4;
             // 
             // dtTransactionDate
             // 
@@ -398,14 +406,14 @@ namespace Ledger.UI.WinForm
             this.dtTransactionDate.Location = new System.Drawing.Point(90, 80);
             this.dtTransactionDate.Name = "dtTransactionDate";
             this.dtTransactionDate.Size = new System.Drawing.Size(80, 20);
-            this.dtTransactionDate.TabIndex = 9;
+            this.dtTransactionDate.TabIndex = 2;
             // 
             // btnDesposit
             // 
             this.btnDesposit.Location = new System.Drawing.Point(370, 80);
             this.btnDesposit.Name = "btnDesposit";
             this.btnDesposit.Size = new System.Drawing.Size(75, 23);
-            this.btnDesposit.TabIndex = 10;
+            this.btnDesposit.TabIndex = 5;
             this.btnDesposit.Text = "Desposit";
             this.btnDesposit.Click += new System.EventHandler(this.btnDesposit_Click);
             // 
@@ -414,17 +422,9 @@ namespace Ledger.UI.WinForm
             this.btnWithdrawal.Location = new System.Drawing.Point(450, 80);
             this.btnWithdrawal.Name = "btnWithdrawal";
             this.btnWithdrawal.Size = new System.Drawing.Size(75, 23);
-            this.btnWithdrawal.TabIndex = 11;
+            this.btnWithdrawal.TabIndex = 7;
             this.btnWithdrawal.Text = "Withdrawal";
             this.btnWithdrawal.Click += new System.EventHandler(this.btnWithdrawal_Click);
-            // 
-            // lblTransactionMessage
-            // 
-            this.lblTransactionMessage.AutoSize = true;
-            this.lblTransactionMessage.Location = new System.Drawing.Point(23, 134);
-            this.lblTransactionMessage.Name = "lblTransactionMessage";
-            this.lblTransactionMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblTransactionMessage.TabIndex = 12;
             // 
             // Ledger
             // 

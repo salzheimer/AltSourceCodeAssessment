@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8024910a-b130-4ddb-ac10-b531bd240089" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be206bb7-34d1-4899-b5d2-51fd8b0a7b82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/Ledger.Services.Api/LedgerService.svc/api" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bc9d4396-0180-41f6-9776-9fd007fb06bb" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="54e47a48-61ea-403e-bbd5-9a449a77e474" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="13e3ef02-c92e-4f40-a9d4-69327f26b74d" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
-    <MetadataFile FileName="Ledger.Core.xsd" MetadataType="Schema" ID="92b38079-98e1-4021-a929-ed3e521776f1" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
-    <MetadataFile FileName="Ledger.Services.Api.Models.xsd" MetadataType="Schema" ID="e5feb25d-223c-4e7b-8ee7-922ad00e747d" SourceId="1" SourceUrl="http://localhost/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="28c91d54-4cbb-44a3-933b-c0ece2a2779a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d5e0523a-1f5f-4957-9ebb-2f4868ee6d6d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="606dc674-df3a-4dcc-b228-191c7340fc17" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="Ledger.Core.xsd" MetadataType="Schema" ID="9ffbd2da-6918-4a7a-a075-17fbaddaafed" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" />
+    <MetadataFile FileName="Ledger.Services.Api.Models.xsd" MetadataType="Schema" ID="b39314df-9989-445b-b20d-3ce1fb0753b0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/api" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

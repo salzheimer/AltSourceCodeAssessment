@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ND6scj9YB6sQkKF2B+JoKkDWsis=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="sf/vA4kLLndru3Xva3gmuZOhB5E=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsHttpBinding" name="WSHttpBinding_IAccountService">
       <properties>
@@ -623,10 +623,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSHttpBinding_IAccountService" contract="LedgerService.IAccountService" bindingType="wsHttpBinding" address="http://localhost/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_IAccountService">
+    <endpoint name="WSHttpBinding_IAccountService" contract="LedgerService.IAccountService" bindingType="wsHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_IAccountService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/Ledger.Services.Api/LedgerService.svc/</serializedValue>
+          <serializedValue>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -708,10 +708,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="WSHttpBinding_ICategoryService" contract="LedgerService.ICategoryService" bindingType="wsHttpBinding" address="http://localhost/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ICategoryService">
+    <endpoint name="WSHttpBinding_ICategoryService" contract="LedgerService.ICategoryService" bindingType="wsHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ICategoryService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/Ledger.Services.Api/LedgerService.svc/</serializedValue>
+          <serializedValue>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -793,10 +793,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="WSHttpBinding_IPaymentTypeService" contract="LedgerService.IPaymentTypeService" bindingType="wsHttpBinding" address="http://localhost/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_IPaymentTypeService">
+    <endpoint name="WSHttpBinding_IPaymentTypeService" contract="LedgerService.IPaymentTypeService" bindingType="wsHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_IPaymentTypeService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/Ledger.Services.Api/LedgerService.svc/</serializedValue>
+          <serializedValue>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -878,10 +878,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="WSHttpBinding_ITransactionService" contract="LedgerService.ITransactionService" bindingType="wsHttpBinding" address="http://localhost/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ITransactionService">
+    <endpoint name="WSHttpBinding_ITransactionService" contract="LedgerService.ITransactionService" bindingType="wsHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ITransactionService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/Ledger.Services.Api/LedgerService.svc/</serializedValue>
+          <serializedValue>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -963,10 +963,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="WSHttpBinding_ILedgerService" contract="LedgerService.ILedgerService" bindingType="wsHttpBinding" address="http://localhost/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ILedgerService">
+    <endpoint name="WSHttpBinding_ILedgerService" contract="LedgerService.ILedgerService" bindingType="wsHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" bindingConfiguration="WSHttpBinding_ILedgerService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/Ledger.Services.Api/LedgerService.svc/</serializedValue>
+          <serializedValue>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

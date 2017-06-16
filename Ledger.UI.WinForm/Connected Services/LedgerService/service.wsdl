@@ -1464,45 +1464,45 @@
   </wsdl:binding>
   <wsdl:service name="LedgerService">
     <wsdl:port name="WSHttpBinding_IAccountService" binding="tns:WSHttpBinding_IAccountService">
-      <soap12:address location="http://localhost/Ledger.Services.Api/LedgerService.svc/" />
+      <soap12:address location="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
+        <wsa10:Address>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>SCOTTALZHEI9FB4\scottalzheimer</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="WSHttpBinding_ICategoryService" binding="tns:WSHttpBinding_ICategoryService">
-      <soap12:address location="http://localhost/Ledger.Services.Api/LedgerService.svc/" />
+      <soap12:address location="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
+        <wsa10:Address>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>SCOTTALZHEI9FB4\scottalzheimer</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="WSHttpBinding_IPaymentTypeService" binding="tns:WSHttpBinding_IPaymentTypeService">
-      <soap12:address location="http://localhost/Ledger.Services.Api/LedgerService.svc/" />
+      <soap12:address location="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
+        <wsa10:Address>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>SCOTTALZHEI9FB4\scottalzheimer</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="WSHttpBinding_ITransactionService" binding="tns:WSHttpBinding_ITransactionService">
-      <soap12:address location="http://localhost/Ledger.Services.Api/LedgerService.svc/" />
+      <soap12:address location="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
+        <wsa10:Address>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>SCOTTALZHEI9FB4\scottalzheimer</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="WSHttpBinding_ILedgerService" binding="tns:WSHttpBinding_ILedgerService">
-      <soap12:address location="http://localhost/Ledger.Services.Api/LedgerService.svc/" />
+      <soap12:address location="http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
+        <wsa10:Address>http://localhost:8733/Design_Time_Addresses/Ledger.Services.Api/LedgerService.svc/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>SCOTTALZHEI9FB4\scottalzheimer</Upn>
         </Identity>
